@@ -9,5 +9,3 @@ class TimeIndia:
         return act_time
 
 
-# ti =  TimeIndia.getCurrentTime()
-# print(ti))
