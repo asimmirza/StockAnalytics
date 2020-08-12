@@ -1,6 +1,7 @@
 import multiprocessing
 from package.GCPService import GCPUtility
 from package.WebScrapping import WebScrap
+from package.Communication import TwilioUtility
 
 
 class ParallelProcessing:
@@ -16,6 +17,7 @@ class ParallelProcessing:
         # print(filename)
         # print(phone_dtl)
         call_stocks = GCPUtility.GCPStorage
+        tw = TwilioUtility.TwilioProcess
         stock_list = call_stocks.readCSV('stock-predictor-bucket',filename)
         ws = WebScrap.WebScrap
         stock_updated_list = []
@@ -30,9 +32,12 @@ class ParallelProcessing:
             if stop_loss >= fv:
                 msg = "Alert ! Stop Loss for " + str(sl[0]) + " is " + str(fv)
                 sl[4]=1
+                tw.CallUser(phone_dtl)
+                tw.SendMessage(msg,phone_dtl)
             elif target <= fv:
                 sl[5] = 1
                 msg = "Alert ! Target Achieved for " + str(sl[0]) + " is " + str(fv)
+                tw.SendMessage(msg, phone_dtl)
             stock_updated_list.append(sl)
         print(stock_updated_list)
         call_stocks.writeCSV('stock-predictor-bucket',filename,stock_updated_list)
