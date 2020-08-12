@@ -8,6 +8,6 @@ if __name__ == '__main__':
 
         # Checking the Market Close Time
         if ct.hour>=15 and ct.minute >=30 :
-            print("Market Closing")
+            print("Market Closed")
             flag_mkt_open = False
 
