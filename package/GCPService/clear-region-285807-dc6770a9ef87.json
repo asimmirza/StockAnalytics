@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "clear-region-285807",
+  "private_key_id": "dc6770a9ef8788f0e9f53b38a3e9388b4fe5a151",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDV88pyvPa8FhWm\nZhtzVfasS8bd7ZDY84NLwYzIbrMb1v4BP7gCmolbf2o9VtM+4S0y5xtGdNAjh83Y\nydkk015of8GR53qdCam0XGMxILB3rqDDAiWCJr9sAUXbG8Yv411w4FZT/HizNYy6\nJNoXcjbcQ6+6cWLzj6AiR+Gfxd72JOIEFGwRZHlmr41S3miBQrbwI1voWb7Ugv2s\n9THcyzC8JCnzgb/hNEtWfsLbuq0JK37DBXVt4ix1Hof99whd8DPd/eZL/uMDl5Ux\nyWgMeIlFL2bOJ/IdNt42mVbtVf36z3qhKBMeh8gw/sp9PnDq+fHFELqLQCGEAr50\niIF/adpPAgMBAAECggEAFgjREUcHzDAkE6qRaivwxybYuNN2JvnRTFSHKL9J3/Sg\n3UUQMOh0fAFf0ihmgiPTsVne079FDlu2pfyHygSgxPdfWqTx2kl7+lDHgHBC7FiG\nQv8uGLzf2wI4jQvLufPbFDxud6DZV2+M6kDQWzjOkJnB99wkmjvw/IbVpExPHZ9X\niAsPEHTvQuZIP5YuG7Fvj1WXJofMJ2Io361gGRZI9Qsm8I5ko/XGyhPMDVDv6hw9\noYROmFYpWaFAxPk6FdXN9auUtER/NgmSnzahQMmPEWZkF++G/X911t+ISQfKLX2p\nPcZK9dN77Fm4yGYr14FzUFrqMQI9WDpCaiUPy937qQKBgQD2mEEgX4K5FnYhPRhk\nZW4H6XLmnMxED3jBtNBbDgs+DW4X/IELf7SE1pTwzrjwZOEp+OXS+Mqvk6sTuEKX\nq3eb8RN3yDCfkw45g7aPeBtcDT6j4cNB5q2n2R9bjKXxdC2sUQQMa+54fj3OsLbW\n6lyQI7jcQI5qGRyaU8088G1x6QKBgQDeHND/NgGyqlKGgeRe4IIytFceHIEILhwR\n6ZuVYcj0UeU8NaX9lsEURzAKaJrnQL2Riqb1yAg7vvhI0PqzcwoYivG83MdmLlcT\n2d8rXLXvdACPGbHRuNxqS7/qoTh4f5VbQjg23NWqWq2FZln204Z/i1+y53mp0kUS\nRF3QSmtPdwKBgQCzG3lKOzUmnFLm54o8+ZMGuiATslWHJbmu8FbZnAS8aGLLl0Jf\niL0kMvtxQKUBLjSBGOBM8Rm+l0IOC6qKoSc6I8rhGI2Aif4t9iX2ZOVyYchanhMF\nXbhKDqEBDNJG4vx9iUaogwhtijv4UVAsH4NlyhxuFZGbLGwjB7Utiu/jaQKBgFhm\n17f74skdiSMH58DrUmaj6FiPt7ttvrZSaB4YgUbcoYRJRfucWNSdUL2TzLNlzQ10\nRedk6gH9jAxPQLjTfJ0wD+6/YI2GvBmmiXBUwgTAAsjxzRhPn0qfQ487A6LSBLwB\nqyYK1u+qj42cownePpXc/wXRo1a33c3bcAtK01MZAoGBALJug0pAdsyI5EPDhgtk\nGr+Nc01ip8RPlwV4C+FLQhm68yphn9c16D5SR518XO9rmVxgTdr2IkzK9jKf7bmz\nN7LtBjdPEg0gRzrcxW+Y1Tn6ddTfD1cGhaVr6qvhqka5rcVRX25BxX7W0lhDKFW7\nyqiDnzOSt+pZoX6k5uYOhjFW\n-----END PRIVATE KEY-----\n",
+  "client_email": "stock-predictor-bot@clear-region-285807.iam.gserviceaccount.com",
+  "client_id": "118330927618175925223",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/stock-predictor-bot%40clear-region-285807.iam.gserviceaccount.com"
+}
