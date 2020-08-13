@@ -14,33 +14,43 @@ class ParallelProcessing:
 
 
     def readStockFile(filename,phone_dtl):
-        # print(filename)
-        # print(phone_dtl)
+        # Creating Object and Teamp Varaible
         call_stocks = GCPUtility.GCPStorage
         tw = TwilioUtility.TwilioProcess
-        stock_list = call_stocks.readCSV('stock-predictor-bucket',filename)
         ws = WebScrap.WebScrap
         stock_updated_list = []
-        # print(stock_list)
+        Call_Flag = 0
+        
+        # Fetching Stock List from Google Storage
+        stock_list = call_stocks.readCSV('stock-predictor-bucket',filename)
+        
         for sl in stock_list:
-            # print(sl[1])
+            
+            #Extracting current Price from Website
             fv = ws.getQuote(sl[1])
             msg = "Current Rate of " + str(sl[0]) + " is " + str(fv)
             # print(msg)
             stop_loss = float(sl[2])
             target = float(sl[3])
+            
+            #Check for Stop losss and Target Achieved
             if stop_loss >= fv:
                 msg = "Alert ! Stop Loss for " + str(sl[0]) + " is " + str(fv)
+                if sl[4] == 0:
+                    Call_Flag = 1
+                    tw.SendMessage(msg,phone_dtl)
                 sl[4]=1
-                tw.CallUser(phone_dtl)
-                tw.SendMessage(msg,phone_dtl)
-            elif target <= fv:
-                sl[5] = 1
+            elif target <= fv:                
                 msg = "Alert ! Target Achieved for " + str(sl[0]) + " is " + str(fv)
-                tw.SendMessage(msg, phone_dtl)
+                if sl[5] == 0:
+                    tw.SendMessage(msg, phone_dtl)
+                sl[5] = 1
             stock_updated_list.append(sl)
-        print(stock_updated_list)
+#         print(stock_updated_list)
+        # Updating the stock list details in Google Cloud 
         call_stocks.writeCSV('stock-predictor-bucket',filename,stock_updated_list)
+        if Call_Flag == 1:
+            tw.CallUser(phone_dtl)
 
 
 
