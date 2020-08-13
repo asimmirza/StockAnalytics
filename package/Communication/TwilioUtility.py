@@ -6,7 +6,7 @@ class TwilioProcess:
             try:
                 client = Call("ACe6debefea0793a37c388b807abd01a9f","db372182e8ac8ec648196583c8c1d209")
                 From_number = "+18316121429"
-                To_number = "+919049084492"
+                To_number = "+91"+str(ph_number)
                 Src_path = "http://demo.twilio.com/docs/voice.xml"
                 print("Call Intiated")
                 client.calls.create(to=To_number,from_=From_number,url= Src_path,method = 'GET')
@@ -25,7 +25,7 @@ class TwilioProcess:
                 print("Message Intiated")
                 client = Call("ACe6debefea0793a37c388b807abd01a9f","db372182e8ac8ec648196583c8c1d209")
                 From_number = "+18316121429"
-                To_number = "+919049084492"
+                To_number = "+91"+str(ph_number)
                 client.messages.create(to=To_number,from_=From_number,body=str(msg))
             except:
                 print("Message -Resource Busy")
