@@ -4,8 +4,8 @@ class TwilioProcess:
     def CallUser(ph_number):
         while True:
             try:
-                client = Call("ACe6debefea0793a37c388b807abd01a9f","db372182e8ac8ec648196583c8c1d209")
-                From_number = "+18316121429"
+                client = Call("<>","<>")
+                From_number = "<>"
                 To_number = "+91"+str(ph_number)
                 Src_path = "http://demo.twilio.com/docs/voice.xml"
                 print("Call Intiated")
